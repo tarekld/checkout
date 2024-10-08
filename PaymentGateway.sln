@@ -1,0 +1,67 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{F36BD266-CD75-4438-9BF9-CD91CDB18F2B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PaymentGateway.Api", "src\PaymentGateway.Api\PaymentGateway.Api.csproj", "{3CD9AAA2-2097-4874-9C40-FFDE26EE8E43}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{1EF69307-274F-458E-BBE8-4D390512A8C6}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PaymentGateway.Api.Tests", "test\PaymentGateway.Api.Tests\PaymentGateway.Api.Tests.csproj", "{3A92D8D6-0359-4752-91AE-D8A59622518A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PaymentGateway.Application", "src\PaymentGateway.Application\PaymentGateway.Application.csproj", "{56A25EFA-A821-40EB-BE3D-7044945D4E38}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PaymentgGateway.Infrasturcture.Payments", "src\PaymentgGateway.Infrasturcture.Payments\PaymentgGateway.Infrasturcture.Payments.csproj", "{106E7737-9971-4A1D-8ADA-3DBF79407F7C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PaymentGateway.Infrustructure.AcquiringBank", "src\PaymentGateway.Infrustructure.AcquiringBank\PaymentGateway.Infrustructure.AcquiringBank.csproj", "{7E54DD61-53B4-4226-AF5A-7ED4B9654CF7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PaymentGateway.Application.UnitTests", "test\PaymentGateway.Application.UnitTests\PaymentGateway.Application.UnitTests.csproj", "{0C1F3457-F644-48B5-9997-E670F5596E09}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3CD9AAA2-2097-4874-9C40-FFDE26EE8E43}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3CD9AAA2-2097-4874-9C40-FFDE26EE8E43}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3CD9AAA2-2097-4874-9C40-FFDE26EE8E43}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3CD9AAA2-2097-4874-9C40-FFDE26EE8E43}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3A92D8D6-0359-4752-91AE-D8A59622518A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3A92D8D6-0359-4752-91AE-D8A59622518A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3A92D8D6-0359-4752-91AE-D8A59622518A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3A92D8D6-0359-4752-91AE-D8A59622518A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{56A25EFA-A821-40EB-BE3D-7044945D4E38}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{56A25EFA-A821-40EB-BE3D-7044945D4E38}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{56A25EFA-A821-40EB-BE3D-7044945D4E38}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{56A25EFA-A821-40EB-BE3D-7044945D4E38}.Release|Any CPU.Build.0 = Release|Any CPU
+		{106E7737-9971-4A1D-8ADA-3DBF79407F7C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{106E7737-9971-4A1D-8ADA-3DBF79407F7C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{106E7737-9971-4A1D-8ADA-3DBF79407F7C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{106E7737-9971-4A1D-8ADA-3DBF79407F7C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7E54DD61-53B4-4226-AF5A-7ED4B9654CF7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7E54DD61-53B4-4226-AF5A-7ED4B9654CF7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7E54DD61-53B4-4226-AF5A-7ED4B9654CF7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7E54DD61-53B4-4226-AF5A-7ED4B9654CF7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0C1F3457-F644-48B5-9997-E670F5596E09}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0C1F3457-F644-48B5-9997-E670F5596E09}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0C1F3457-F644-48B5-9997-E670F5596E09}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0C1F3457-F644-48B5-9997-E670F5596E09}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{3CD9AAA2-2097-4874-9C40-FFDE26EE8E43} = {F36BD266-CD75-4438-9BF9-CD91CDB18F2B}
+		{3A92D8D6-0359-4752-91AE-D8A59622518A} = {1EF69307-274F-458E-BBE8-4D390512A8C6}
+		{56A25EFA-A821-40EB-BE3D-7044945D4E38} = {F36BD266-CD75-4438-9BF9-CD91CDB18F2B}
+		{106E7737-9971-4A1D-8ADA-3DBF79407F7C} = {F36BD266-CD75-4438-9BF9-CD91CDB18F2B}
+		{7E54DD61-53B4-4226-AF5A-7ED4B9654CF7} = {F36BD266-CD75-4438-9BF9-CD91CDB18F2B}
+		{0C1F3457-F644-48B5-9997-E670F5596E09} = {1EF69307-274F-458E-BBE8-4D390512A8C6}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DC774CB3-CE55-4676-A499-3FF28BAF4BD2}
+	EndGlobalSection
+EndGlobal
