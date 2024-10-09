@@ -1,8 +1,4 @@
-﻿using System.Text.RegularExpressions;
-
-using PaymentGateway.Application.Exceptions;
-
-namespace PaymentGateway.Application.Domain.Model.Entities
+﻿namespace PaymentGateway.Application.Domain.Model.Entities
 {
     public class Amount
     {
