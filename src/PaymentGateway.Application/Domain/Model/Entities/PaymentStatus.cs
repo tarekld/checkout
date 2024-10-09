@@ -2,6 +2,7 @@
 {
     public enum PaymentStatus
     {
+        Requested,
         Authorized,
         Declined,
         Rejected

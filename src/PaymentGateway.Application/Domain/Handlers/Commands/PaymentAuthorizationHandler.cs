@@ -51,6 +51,7 @@ namespace PaymentGateway.Application.Domain.Handlers.Commands
                     ExpiryDate = $"{request.ExpiryMonth.ToString("00")}/{request.ExpiryYear}"
                   },
                 cancellationToken);
+
             if(response.Authorized)
             {
                 payment.Authorize();
