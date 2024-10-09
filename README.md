@@ -8,3 +8,22 @@ PaymentgGateway.Infrasturcture.Payments implements IPaymentsRepository
   
 PaymentGateway.Infrustructure.AcquiringBank implements IAcquirerBankService
 	AcquirerBankService craate  httpclient to post the payments to the bank simulator
+To Test the endpoints:
+
+1: Start the simulator by run docker-compose up from the top directory of the solution
+2: In visual studio set PaymentGateway.Api as the startup project
+3: Lunch the project, a swagger documentaion are available,  you can use the swagger UI to post and gets payments
+        Or you can  execute the below request in postman
+
+        curl -X 'POST' \
+  'https://localhost:7092/api/Payments' \
+  -H 'accept: text/plain' \
+  -H 'Content-Type: application/json' \
+  -d '{
+  "cardNumber": "2222405343248877",
+  "expiryMonth": 4,
+  "expiryYear": 2025,
+  "currency": "GBP",
+  "amount": 100,
+  "cvv": "123"
+}'
