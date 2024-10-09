@@ -1,18 +1,29 @@
-# Instructions for candidates
+The solution of the task is based on the Clean Architecture and CQRS with the help of MediatR libaray.
+The project PaymentGateway.Application is the Domain centric of the solution, where the Implementation of GetPaymentHandler and PaymentAuthorizationHandler.
+GetPaymentHandler retrieves the payment  for the repository and return it through the Api to the Merchant
+PaymentAuthorizationHandler received payments from the merchant through API and process  the payment authorization by creating  the payment  and submitting it the bank acquirer
+	Notice PaymentGateway.Application is defining the ports (interfaces) for the infrastucture aspects, IPaymentsRepository and IAcquirerBankService.
+PaymentgGateway.Infrasturcture.Payments implements IPaymentsRepository
+ 	PaymentsRepository reads or save the payments from in Memory list storage
+  
+PaymentGateway.Infrustructure.AcquiringBank implements IAcquirerBankService
+	AcquirerBankService craate  httpclient to post the payments to the bank simulator
+To Test the endpoints:
 
-This is the .NET version of the Payment Gateway challenge. If you haven't already read this [README.md](https://github.com/cko-recruitment/) on the details of this exercise, please do so now. 
+1: Start the simulator by run docker-compose up from the top directory of the solution
+2: In visual studio set PaymentGateway.Api as the startup project
+3: Lunch the project, a swagger documentaion are available,  you can use the swagger UI to post and gets payments
+        Or you can  execute the below request in postman
 
-## Template structure
-```
-src/
-    PaymentGateway.Api - a skeleton ASP.NET Core Web API
-test/
-    PaymentGateway.Api.Tests - an empty xUnit test project
-imposters/ - contains the bank simulator configuration. Don't change this
-
-.editorconfig - don't change this. It ensures a consistent set of rules for submissions when reformatting code
-docker-compose.yml - configures the bank simulator
-PaymentGateway.sln
-```
-
-Feel free to change the structure of the solution, use a different test library etc.
+        curl -X 'POST' \
+  'https://localhost:7092/api/Payments' \
+  -H 'accept: text/plain' \
+  -H 'Content-Type: application/json' \
+  -d '{
+  "cardNumber": "2222405343248877",
+  "expiryMonth": 4,
+  "expiryYear": 2025,
+  "currency": "GBP",
+  "amount": 100,
+  "cvv": "123"
+}'
