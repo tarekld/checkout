@@ -42,6 +42,7 @@ public class PaymentsControllerTests
         // Act
         var response = await client.GetAsync($"/api/Payments/{payment.Id}");
         Console.WriteLine(response.StatusCode);
+        throw new Exception(response.StatusCode.ToString());
         var paymentResponse = await response.Content.ReadFromJsonAsync<PostPaymentResponse>();
 
         // Assert
