@@ -16,9 +16,6 @@ namespace PaymentGateway.Infrustructure.AcquiringBank
 
         public async Task<AcquirerBankResponse> AuthoriseAsync(AcquirerPaymentRequest acquirerPaymentRequest, CancellationToken cancellationToken)
         {
-
-            try
-            {
                 var response = await _httpCLient.PostAsJsonAsync(
                     "payments",
                     new
@@ -36,11 +33,6 @@ namespace PaymentGateway.Infrustructure.AcquiringBank
                 var acquirerBankResponse = await response.Content.ReadFromJsonAsync<AcquirerBankResponse>(cancellationToken);
 
                 return acquirerBankResponse;
-            }
-            catch (Exception ex)
-            {
-                throw;
-            }
         }
     }
 }
