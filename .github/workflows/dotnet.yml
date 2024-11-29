@@ -25,6 +25,8 @@ jobs:
     - name: Build
       run: dotnet build --no-restore
     - name: Docker Setup Buildx
-      uses: docker/setup-buildx-action@v3.7.1         
+      uses: docker/setup-buildx-action@v3.7.1
+    - name: Docker Compose Command
+      uses: blag/action-docker-compose@v0.0.1          
     - name: Test
       run: dotnet test --no-build --verbosity normal
