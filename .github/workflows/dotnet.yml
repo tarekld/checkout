@@ -23,7 +23,7 @@ jobs:
     - name: Restore dependencies
       run: dotnet restore
     - name: test bb
-      run: docker compose
+      run: docker compose up
     - name: Build
       run: dotnet build --no-restore          
     - name: Test
